@@ -1,0 +1,202 @@
+body {
+    background-image: url("Autorzy.png");
+}
+
+img{
+    height: 50px;
+    width: 50px;
+}
+
+#left{
+    width: 20%;
+    float: left;
+    height: 100px;
+}
+
+#lifeLeft, #coinsLeft{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    gap: 20px;
+    display: none;
+}
+
+#midle {
+    width: 60%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align elements at the top */
+    align-items: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    float: left;
+    height: 100vh;
+}
+
+
+#coinsRight, #lifeRight{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    gap: 20px;
+    justify-content: right;
+    display: none;
+}
+
+
+#right{
+    width: 20%;
+    float: left;
+    height: 100%;
+}
+
+
+/* Position the welcome message at the top */
+h1 {
+    margin-top: 20px; /* Optional: Add some margin to the top for spacing */
+    font-size: 50px;
+    color: #333;
+}
+
+/* For the game area */
+#gameArea {
+    width: 600px;
+    height: 600px;
+    display: none;
+    /*margin-top: 20px;*/
+    text-align: center;
+}
+
+/* Canvas border */
+canvas {
+    border: 1px solid black;
+}
+
+/* Style buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Start button specific styles */
+#startButton {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+}
+
+#startButton:hover {
+    background-color: #45a049;
+}
+
+/* Level buttons container */
+#level {
+    width: 600px;
+    height: 600px;
+    /*margin-top: 20px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Level buttons style */
+.level {
+    display: block;
+    margin: 10px;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.level:hover {
+    background-color: #007B8D;
+}
+
+/* Hide start, pause, and resume buttons initially */
+#startButton {
+    display: none;
+}
+
+/* Optional: Hide the level buttons once the game starts (you can adjust this) */
+#level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Ogólny styl przycisku */
+#pauseButton {
+    display: none;
+    background-color: #dc3545; /* Czerwony dla "Stop" */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Styl przycisku, gdy jest wciśnięty */
+#pauseButton:active {
+    transform: scale(0.98); /* Lekko zmniejsza przycisk przy kliknięciu */
+}
+
+/* Styl dla zmiany stanu "Start" */
+#pauseButton.start {
+    background-color: #28a745; /* Zielony dla "Start" */
+}
+
+/* Styl po najechaniu myszką */
+#pauseButton:hover {
+    background-color: #c82333; /* Ciemniejszy czerwony przy "Stop" */
+}
+
+#pauseButton.start:hover {
+    background-color: #218838; /* Zmiana koloru na ciemniejszy przy hoverze dla "Start" */
+}
+
+#pauseButton:focus {
+    outline: none; /* Usuwamy obramowanie po kliknięciu */
+}
+
+#rulesButton {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#rulesButton:hover {
+    background-color: #45a049;
+}
+
+#resetButton{
+    display: none;
+}
+
+.rotated-text {
+    transform: rotate(90deg); /* Obrót o 90 stopni */
+    transform-origin: left bottom; /* Punkt obrotu */
+    font-size: 24px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}

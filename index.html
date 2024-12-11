@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dinozaul</title>
+    <link rel="icon" href="dinozaul_blue.png" type="image/png">
+</head>
+
+<body>
+    
+    <div id="left">
+        <div id="lifeLeft">
+            <img src="Serce.png" alt="Serce">
+            <h2 id="lifeAmountLeft"></h2>
+        </div>
+        <div id="coinsLeft">
+            <img src="coin.png" alt="moneta">
+            <h2 id="coinsAmountLeft"></h2>
+        </div>
+    </div>
+    <!-- <div class="rotated-text"></div> -->
+    <div id="midle">
+        <h1>Witaj w grze!</h1>
+        <div id="gameArea">
+            <p id="counter">Gra się rozpocznie się za</p>
+            <canvas id="gameCanvas" width="500" height="500"></canvas>
+        </div>  
+    
+        <div id="level">
+            <button id="startButton">Start Gry</button>
+            <button class="level" onclick="level1()" id="easy">Łatwy</button>
+            <button class="level" onclick="level2()" id="medium">Średni</button>
+            <button class="level" onclick="level3()" id="hard">Trudny</button>
+            <!-- <h2>Autorzy: Dominik Jastrzab i Piotr Dudziewicz</h2> -->
+        </div>
+    
+        <button id="pauseButton" class="stop" onclick="toggleButton()">Stop</button>
+        <button id="resetButton">Reset</button>
+        <p id="time"></p>
+        <button id="rulesButton">Zasady gry</button>
+    </div>
+
+    <div id="right">
+        <div id="lifeRight">
+            <h2 id="lifeAmountRight"></h2>
+            <img src="Serce.png" alt="Serce">
+        </div>
+        <div id="coinsRight">
+            <h2 id="coinsAmountRight"></h2>
+            <img src="coin.png" alt="moneta">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
